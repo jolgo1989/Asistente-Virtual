@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">VivaSantaMarta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="BienvenidoFragment">BIENVENIDO</string>
+    <string name="descriptionHome">DescririonHome</string>
+    <string name="descriptionLogIn">DescririonLogIn</string>
+    <string name="descriptionButtonLogIn">ButtonLogIn</string>
+    <string name="descriptionRegister">Descririonregister</string>
+    <string name="descriptionLugaresImg1">imageLugares1</string>
+    <string name="descriptionLugaresImg2">imageLugares2</string>
+    <string name="descriptionLugaresImg3">imageLugares3</string>
+    <string name="descriptionLugaresImgCarView">CardViewImg</string>
+    <string name="descriptionLugaresImgIcon">Icon</string>
+    <string name="registrarseHome">Registrarse</string>
+    <string name="loginHome">Log in</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="TextLogin">Log In</string>
+    <string name="TextInputname">Usuario</string>
+    <string name="TextInputPasword">Contrseña</string>
+    <string name="ButtonLogin">Log In</string>
+    <string name="buttonRegister">SING UP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TextViewlugares">Lugares</string>
+    <string name="TextViewRestaurantes">Restaurantes</string>
+    <string name="TextViewMuseos">Museos</string>
+    <string name="textViewTitle">TextViewTitle</string>
+    <string name="textViewDescription">TextViewDescription</string>
+    <string name="textCardViewAdress">TextViewAdress</string>
+    <string name="itemOut">ItemOut</string>
+    <string name="TextViewcitas">TextViewCitas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

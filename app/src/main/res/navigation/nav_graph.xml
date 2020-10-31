@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.vivasantamarta.Fragment.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_homeFragment2_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.vivasantamarta.Fragment.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_lugaresFragment"
+            app:destination="@id/lugaresFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.vivasantamarta.Fragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lugaresFragment"
+        android:name="com.example.vivasantamarta.Fragment.LugaresFragment"
+        android:label="fragment_lugares"
+        tools:layout="@layout/fragment_lugares" >
+        <action
+            android:id="@+id/action_lugaresFragment_to_sitiosFragment"
+            app:destination="@id/sitiosFragment" />
+        <action
+            android:id="@+id/action_lugaresFragment_to_restaurantesFragment"
+            app:destination="@id/restaurantesFragment" />
+        <action
+            android:id="@+id/action_lugaresFragment_to_museosFragment"
+            app:destination="@id/museosFragment" />
+        <action
+            android:id="@+id/action_lugaresFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/sitiosFragment"
+        android:name="com.example.vivasantamarta.Fragment.SitiosFragment"
+        android:label="fragment_sitios"
+        tools:layout="@layout/fragment_sitios" />
+    <fragment
+        android:id="@+id/restaurantesFragment"
+        android:name="com.example.vivasantamarta.Fragment.RestaurantesFragment"
+        android:label="fragment_restaurantes"
+        tools:layout="@layout/fragment_restaurantes" />
+    <fragment
+        android:id="@+id/museosFragment"
+        android:name="com.example.vivasantamarta.Fragment.MuseosFragment"
+        android:label="fragment_museos"
+        tools:layout="@layout/fragment_museos" />
+</navigation>

@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //metodo para activar el Alert dialog
     override fun onBackPressed() {
         MaterialAlertDialogBuilder(this)
             .setMessage("¿Desea salir de la aplicación?")

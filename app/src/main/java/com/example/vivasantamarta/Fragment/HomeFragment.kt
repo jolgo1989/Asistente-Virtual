@@ -7,8 +7,10 @@ import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.activity.addCallback
 import androidx.navigation.fragment.findNavController
 import com.example.vivasantamarta.R
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class HomeFragment : Fragment() {
 
@@ -34,6 +36,24 @@ class HomeFragment : Fragment() {
 
         textViewRegistrarse.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment2_to_registerFragment)
+        }
+
+        //Metodo para activar el Alert dialog(Salir de aplicación)
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            // With blank your fragment BackPressed will be disabled.
+            context?.let {
+                MaterialAlertDialogBuilder(it)
+                    .setMessage("¿Desea salir de la aplicación?")
+
+                    .setNegativeButton("No") { dialog, which ->
+                        // Respond to negative button press
+                    }
+                    .setPositiveButton("Si") { dialog, which ->
+                        // Respond to positive button press
+                        activity?.finish()
+                    }
+                    .show()
+            }
         }
 
     }

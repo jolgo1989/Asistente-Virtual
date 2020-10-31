@@ -1,33 +1,28 @@
 package com.example.vivasantamarta
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.KeyEvent
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
+import com.example.vivasantamarta.Fragment.LugaresFragment
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Metodo para controlar el Up Button
+        val upButton = AppBarConfiguration(setOf(R.id.lugaresFragment,R.id.homeFragment2))
 
-
-    }
-
-    //metodo para activar el Alert dialog
-    override fun onBackPressed() {
-        MaterialAlertDialogBuilder(this)
-            .setMessage("¿Desea salir de la aplicación?")
-
-            .setNegativeButton("No") { dialog, which ->
-                // Respond to negative button press
-            }
-            .setPositiveButton("Si") { dialog, which ->
-                // Respond to positive button press
-
-                finish()
-            }
-            .show()
+        //Metodo para agregar el Up button
+        val navController = this.findNavController(R.id.nav_host_fragment)
+        NavigationUI.setupActionBarWithNavController(this,navController,upButton)
 
     }
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp()
+    }
+
 }

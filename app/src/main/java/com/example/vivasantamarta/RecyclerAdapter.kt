@@ -22,7 +22,7 @@ class RecyclerAdapter(private val userList: ArrayList<Sitios> = ArrayList()) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_view, parent, false)
-        //Metodo para llamar los ID desde Navigation navigation component
+        
         return ViewHolder(v).apply {
             textViewDescription = v.findViewById(R.id.textViewCardViewDescription)
             textViewTitle = v.findViewById(R.id.textViewCarviewTitle)

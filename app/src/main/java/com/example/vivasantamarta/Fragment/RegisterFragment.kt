@@ -60,7 +60,7 @@ class RegisterFragment : Fragment() {
                 textInpRegisterPasword2.error = ""
             }
 
-            if (textInputName.isNotEmpty() || textInputRagister1.isNotEmpty() || textInputRagister2.isNotEmpty()) {
+            if (textInputName.isNotEmpty() && textInputRagister1.isNotEmpty() && textInputRagister2.isNotEmpty()) {
                 val admin =
                     activity?.let { it1 -> AdminSQliteOpenHelper(it1, "administracion", null, 1) }
                 val bd = admin?.writableDatabase
@@ -75,7 +75,7 @@ class RegisterFragment : Fragment() {
 
             }
 
-            
+
         }
     }
 

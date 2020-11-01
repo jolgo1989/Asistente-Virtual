@@ -51,7 +51,7 @@ class LugaresFragment : Fragment() {
 
     }
 
-    //Los onCreate,onCreateOptionsMenu y onOptionsItemSelected permiten la creación del menuOverFlow
+    //Los metodos onCreate,onCreateOptionsMenu y onOptionsItemSelected permiten la creación del menuOverFlow
     override fun onCreate(savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
         super.onCreate(savedInstanceState)

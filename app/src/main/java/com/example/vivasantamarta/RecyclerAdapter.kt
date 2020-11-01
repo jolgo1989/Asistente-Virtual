@@ -30,7 +30,6 @@ class RecyclerAdapter(private val userList: ArrayList<Sitios> = ArrayList()) :
             textViewCitas = v.findViewById(R.id.textViewCitas)
             imageCardView = v.findViewById(R.id.imageCardView)
 
-            // and any other views you need to set up
         }
     }
 

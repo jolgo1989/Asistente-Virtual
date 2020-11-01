@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import com.example.vivasantamarta.Fragment.LugaresFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Metodo para controlar el Up Button
+        //Metodo para desaparecer el Up BUtton
         val upButton = AppBarConfiguration(setOf(R.id.lugaresFragment,R.id.homeFragment2))
 
         //Metodo para agregar el Up button

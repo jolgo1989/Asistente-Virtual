@@ -31,34 +31,38 @@ class RegisterFragment : Fragment() {
         val buttonRegister = view.findViewById<Button>(R.id.buttonRegister)
 
         buttonRegister.setOnClickListener {
-            val textInputregisterName = view.findViewById<TextInputLayout>(R.id.textInputregisterName)
-            val textInpRegisterPasword1 = view.findViewById<TextInputLayout>(R.id.textInpRegisterPasword1)
-            val textInpRegisterPasword2 = view.findViewById<TextInputLayout>(R.id.textInpRegisterPasword2)
+            val textInputregisterName =
+                view.findViewById<TextInputLayout>(R.id.textInputregisterName)
+            val textInpRegisterPasword1 =
+                view.findViewById<TextInputLayout>(R.id.textInpRegisterPasword1)
+            val textInpRegisterPasword2 =
+                view.findViewById<TextInputLayout>(R.id.textInpRegisterPasword2)
 
             val textInputName = textInputregisterName.editText?.text.toString()
             val textInputRagister1 = textInpRegisterPasword1.editText?.text.toString()
             val textInputRagister2 = textInpRegisterPasword2.editText?.text.toString()
 
-            if (textInputName.isEmpty() ){
-                textInputregisterName.error= "Digite nombre"
-            }else{
+            if (textInputName.isEmpty()) {
+                textInputregisterName.error = "Digite nombre"
+            } else {
                 textInputregisterName.error = ""
             }
 
-            if (textInputRagister1.isEmpty() ){
-                textInpRegisterPasword1.error= "Digite Clave"
-            } else{
+            if (textInputRagister1.isEmpty()) {
+                textInpRegisterPasword1.error = "Digite Clave"
+            } else {
                 textInpRegisterPasword1.error = ""
             }
 
-            if (textInputRagister2.isEmpty() ){
-                textInpRegisterPasword2.error= "Digite Clave"
-            }else{
+            if (textInputRagister2.isEmpty()) {
+                textInpRegisterPasword2.error = "Digite Clave"
+            } else {
                 textInpRegisterPasword2.error = ""
             }
 
-            if(textInputName.isNotEmpty() ||textInputRagister1.isNotEmpty() || textInputRagister2.isNotEmpty() ){
-                val admin = activity?.let { it1 -> AdminSQliteOpenHelper(it1, "administracion", null, 1) }
+            if (textInputName.isNotEmpty() || textInputRagister1.isNotEmpty() || textInputRagister2.isNotEmpty()) {
+                val admin =
+                    activity?.let { it1 -> AdminSQliteOpenHelper(it1, "administracion", null, 1) }
                 val bd = admin?.writableDatabase
                 val registro = ContentValues()
                 registro.put("nombre_usuario", textInputName)
@@ -71,25 +75,8 @@ class RegisterFragment : Fragment() {
 
             }
 
-
-
-            /*
-
-            if (textInputRagister1 == null ){
-                textInpRegisterPasword1.error= "Digite nombre"
-            }
-            if (textInputRagister2 == null ){
-                textInpRegisterPasword2.error= "Digite nombre"
-            }
-
-             */
-
-
-
-
-
-
-            }
+            
         }
-
     }
+
+}
